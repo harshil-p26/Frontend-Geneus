@@ -2,31 +2,43 @@ import { PowerIcon } from "@heroicons/react/16/solid";
 import microScope from "../assets/microscope.png";
 import search from "../assets/search.png";
 import genes from "../assets/genes.png";
+import hiSim from "../assets/1.jpeg";
+import GeneSetGraph from "../assets/2.jpeg";
+import JaccardImage from "../assets/3.jpeg";
+import GeneSetClusteringImage from "../assets/4.jpeg";
+import MSETImage from "../assets/5.jpeg";
 
 export const navbarLinks = [
   {
     name: "Manage GeneSets",
     subMenu: [
-      "Manage Projects",
-      "View My GeneSets ",
-      "Search GeneSets",
-      "Upload GeneSets",
-      "Upload Batch GeneSets",
+      { name: "Manage Projects", link: "" },
+      { name: "View My GeneSets", link: "" },
+      { name: "Search GeneSets", link: "" },
+      { name: "Upload GeneSets", link: "" },
+      { name: "Upload Batch GeneSets", link: "" },
     ],
   },
   {
     name: "Curation",
-    subMenu: ["Search/Assign Publication", "Manage Curation Tasks"],
+    subMenu: [
+      { name: "Search/Assign Publication", link: "/assign-publication" },
+      { name: "Manage Curation Tasks", link: "/manage-curation" },
+    ],
   },
   {
     name: "Analyze GeneSets",
-    subMenu: ["Analyze GeneSets", "View Results", "Emphasize Genes"],
+    subMenu: [
+      { name: "Analyze GeneSets", link: "/analyze-geneset" },
+      { name: "View Results", link: "/view-result" },
+      { name: "Emphasize Genes", link: "/emphasis-gen" },
+    ],
   },
   {
     name: "Welcome Guests",
     subMenu: [
-      { name: "Account Settings", icon: PowerIcon },
-      { name: "Logout", icon: PowerIcon },
+      { name: "Account Settings", icon: PowerIcon, link: "" },
+      { name: "Logout", icon: PowerIcon, link: "" },
     ],
   },
 ];
@@ -46,5 +58,118 @@ export const exploreIcons = [
     img: genes,
     name: "Analyze GeneSets",
     desc: "Analyze gene sets to extract valuable insights",
+  },
+];
+
+export const analysisTools = [
+  {
+    icon: hiSim,
+    title: "HiSIM",
+    description:
+      "Biclique-based analysis used to generate hierarchical maps of gene set intersections.",
+  },
+  {
+    icon: GeneSetGraph,
+    title: "GeneSetGraph",
+    description: "Visualize the Gene-GeneSet Graph",
+  },
+  {
+    icon: JaccardImage,
+    title: "Jaccard Similarity",
+    description:
+      "Calculate Jaccard Coefficients for all pairwise combinations of GeneSets",
+  },
+  {
+    icon: GeneSetClusteringImage,
+    title: "GeneSet Clustering",
+    description: "Use Jaccard Distance to cluster GeneSets",
+  },
+  {
+    icon: MSETImage,
+    title: "MSET",
+    description: "Enrichment test for all GeneSets Selected",
+  },
+  {
+    icon: hiSim,
+    title: "Find Variant Tool",
+    description:
+      "The Find Variants tool is designed to help a user find gene sets analogous to a target gene set in other species",
+  },
+  {
+    icon: GeneSetGraph,
+    title: "ABBA Gene Search",
+    description:
+      "Find genes most closely associated with your gene(s) of interest",
+  },
+  {
+    icon: JaccardImage,
+    title: "Boolean Algebra",
+    description: "Use Advanced set logic to integrate multiple GeneSets",
+  },
+  {
+    icon: GeneSetClusteringImage,
+    title: "DBSCAN Gene Clustering",
+    description: "Based on clustering algorithm for genes",
+  },
+  {
+    icon: MSETImage,
+    title: "Combine GeneSets",
+    description:
+      "Advanced tool for multiple GeneSets into a single association matrixs",
+  },
+];
+
+export const ViewResultsMenu = [
+  {
+    name: "Tool Type",
+    subMenu: [
+      "Manage Projects",
+      "View My GeneSets ",
+      "Search GeneSets",
+      "Upload GeneSets",
+      "Upload Batch GeneSets",
+    ],
+  },
+  {
+    name: "Date Range",
+    subMenu: ["Search/Assign Publication", "Manage Curation Tasks"],
+  },
+  {
+    name: "Status",
+    subMenu: [
+      { name: "Account Settings", icon: PowerIcon },
+      { name: "Logout", icon: PowerIcon },
+    ],
+  },
+];
+
+export const tableData = [
+  {
+    name: "GeneSet Run A",
+    tool: "ABBA",
+    date: "April 1,2025",
+    description: "First trial",
+    status: "done",
+  },
+  {
+    name: "GeneSet Run A",
+    tool: "ABBA",
+    date: "April 1,2025",
+    description: "First trial",
+    status: "running",
+  },
+  {
+    name: "GeneSet Run A",
+    tool: "ABBA",
+    date: "April 1,2025",
+    description: "First trial",
+    status: "failed",
+  },
+  {
+    name: "GeneSet Run A",
+    tool: "ABBA",
+    date: "April 1,2025",
+    description: "First trial",
+    status: "done",
   },
 ];
