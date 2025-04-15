@@ -10,9 +10,9 @@ import {
 
 const ViewGenSetsContent = () => {
   return (
-    <div className="flex-1 mx-auto max-w-7xl mt-10  ">
-      <div className=" text-white bg-[#036303] flex space-x-60  border py-2 px-3 ">
-        <div className="flex space-x-7">
+    <div className="flex-1 mx-auto text-sm max-w-7xl mt-10 w-full ">
+      <div className=" text-white  bg-[#1E5949] flex  justify-between w-full  border py-5 px-3 ">
+        <div className="flex space-x-14">
           <div className="flex space-x-2 items-center">
             <FolderIcon className="size-5" />
             <span>Add to Project</span>
@@ -24,10 +24,10 @@ const ViewGenSetsContent = () => {
         </div>
         <div className="flex space-x-2 items-center">
           <span>25 per page</span>
-          <ArrowDownIcon className="size-5" />
+          <ArrowDownIcon className="size-4" />
         </div>
       </div>
-      <div className=" flex space-x-56 mt-2">
+      <div className=" flex space-x-56 mt-5">
         <div className="flex space-x-2 items-center">
           <ChevronUpIcon className="size-5" />
           <h1>SPECIES</h1>
@@ -37,7 +37,7 @@ const ViewGenSetsContent = () => {
         </div>
         <h2>Name</h2>
       </div>
-      <div className="py-2  px-2 w-full bg-gray-300 mt-2 ">
+      <div className="py-2  mt-5 px-2 w-full bg-gray-300  ">
         <p>No Data available in the table</p>
       </div>
       <div className="h-1 bg-stone-800" />

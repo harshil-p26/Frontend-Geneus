@@ -9,6 +9,7 @@ import ManageProjects from "../pages/ManageProjects";
 import ViewGenSets from "../pages/ViewGenSets";
 import SearchGeneSet from "../pages/SearchGeneSet";
 import UploadGeneSet from "../pages/UploadGeneSet";
+import BatchUpload from "../pages/BatchUpload";
 
 // we give it an array of routes objects
 const router = createBrowserRouter([
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
   { path: "/view-geneset", element: <ViewGenSets /> },
   { path: "/search-geneset", element: <SearchGeneSet /> },
   { path: "/upload-geneset", element: <UploadGeneSet /> },
+  { path: "/batch-upload", element: <BatchUpload /> },
 ]);
 
 export default router;

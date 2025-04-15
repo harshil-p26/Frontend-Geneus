@@ -5,8 +5,8 @@ import { PlusIcon, MinusIcon } from "@heroicons/react/16/solid";
 
 const SearchGeneSetContent = () => {
   return (
-    <div className="flex-1 mx-auto max-w-7xl mt-10">
-      <div className=" text-white  bg-[#036303] flex space-x-60  border py-3 px-3 ">
+    <div className="flex-1 mx-auto max-w-7xl mt-10 w-full">
+      <div className=" text-white  bg-[#1E5949] flex justify-between  border py-5 px-5 ">
         <div>
           <input
             placeholder="search here ..."
@@ -19,7 +19,7 @@ const SearchGeneSetContent = () => {
           <MinusIcon className="size-5" />
         </div>
       </div>
-      <div className="w-full border flex justify-around">
+      <div className="w-full border flex py-2 justify-around">
         <div className="flex space-x-2">
           <input type="checkbox" />
           <label>GeneSets</label>

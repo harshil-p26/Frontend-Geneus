@@ -2,11 +2,23 @@ import React from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const AssignPublicationContent = () => {
+  useGSAP(() => {
+    gsap.from(".box", {
+      x: -600,
+      opacity: 0,
+      scale: 0.75,
+      duration: 1.5,
+      ease: "elastic",
+    });
+  });
+
   return (
-    <div className="w-full  bg-gray-200 h-screen flex-1 flex items-center justify-center">
-      <div className="max-w-7xl py-10 bg-white  px-20 flex flex-col space-y-3 border rounded-2xl shadow-inner border-gray-300">
+    <div className="w-full   bg-gray-200 h-screen flex-1 flex items-center justify-center">
+      <div className=" box max-w-7xl py-10 bg-white  px-20 flex flex-col space-y-3 border rounded-2xl shadow-inner border-gray-300">
         <div className="flex items-center space-x-2">
           <div className="py-2 px-2 bg-[#036303]/20 rounded-full">
             <MagnifyingGlassIcon className="size-5" />

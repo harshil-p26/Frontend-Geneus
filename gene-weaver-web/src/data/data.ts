@@ -12,11 +12,11 @@ export const navbarLinks = [
   {
     name: "Manage GeneSets",
     subMenu: [
-      { name: "Manage Projects", link: "" },
-      { name: "View My GeneSets", link: "" },
-      { name: "Search GeneSets", link: "" },
-      { name: "Upload GeneSets", link: "" },
-      { name: "Upload Batch GeneSets", link: "" },
+      { name: "Manage Projects", link: "/manage-projects" },
+      { name: "View My GeneSets", link: "/view-geneset" },
+      { name: "Search GeneSets", link: "/search-geneset" },
+      { name: "Upload GeneSets", link: "/upload-geneset" },
+      { name: "Upload Batch GeneSets", link: "/batch-upload" },
     ],
   },
   {
@@ -123,22 +123,25 @@ export const ViewResultsMenu = [
   {
     name: "Tool Type",
     subMenu: [
-      "Manage Projects",
-      "View My GeneSets ",
-      "Search GeneSets",
-      "Upload GeneSets",
-      "Upload Batch GeneSets",
+      "HiSIM",
+      "Jaccard Similarity",
+      "MSET",
+      "ABBA Gene Search",
+      "DBSCAN Gene Clustering",
+      "GeneSetGraph",
+      "Find variant Tool",
+      "Boolean Algebra",
+      "Combine GeneSets",
+      
     ],
   },
-  {
-    name: "Date Range",
-    subMenu: ["Search/Assign Publication", "Manage Curation Tasks"],
-  },
+
   {
     name: "Status",
     subMenu: [
-      { name: "Account Settings", icon: PowerIcon },
-      { name: "Logout", icon: PowerIcon },
+      { name: "Done", icon: PowerIcon },
+      { name: "Failed", icon: PowerIcon },
+      { name: "Running", icon: PowerIcon },
     ],
   },
 ];

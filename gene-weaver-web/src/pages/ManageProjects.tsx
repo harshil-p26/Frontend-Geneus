@@ -37,14 +37,14 @@ const ManageProjectContent = () => {
             <p className="text-sm text-center">Showing 0 of 0 entries</p>
           </div>
         </div>
-        <div className=" relative flex   w-[70%] space-x-36">
+        <div className=" relative flex    w-[70%] space-x-36">
           <div className=" flex space-x-2">
             <FolderIcon className="size-5" />
             <span className="text-sm">Favorites</span>
             <div className="h-1 w-28 mt-1 bg-[#036303] rounded-md absolute top-5 -left-3" />
           </div>
           <div className="space-y-4">
-            <div className="flex space-x-12 mt-2">
+            <div className="flex justify-between mt-2">
               <MagnifyingGlassIcon className="size-5" />
               <h1>PROJECT NAME</h1>
               <h2>SIZE</h2>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
@@ -13,10 +13,30 @@ import { tableData } from "../data/data";
 import clsx from "clsx";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 
 const ViewResultsContent = () => {
+  
+  useGSAP(() => {
+    gsap.fromTo(
+      ".table-row",
+      {
+        opacity: 0,
+        y: -30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 1,
+        duration: 3,
+        ease: "elastic",
+      }
+    );
+  });
   return (
-    <div className="w-screen px-7 flex-1">
+    <div className="w-screen px-7 flex-1 max-w-7xl mx-auto">
       <h1 className="mt-8">Results Management</h1>
       <div className="h-1 w-full mt-2 bg-[#036303] rounded-md" />
 
@@ -26,13 +46,13 @@ const ViewResultsContent = () => {
           <div className="border rounded-md max-w-sm flex items-center px-2 py-1">
             <MagnifyingGlassIcon className="size-5" />
             <input
-              className=" placeholder:text-xs h-ful py-1 px-2 "
+              className=" placeholder:text-xs h-full py-1 px-2 "
               placeholder="Search your results..."
             />
           </div>
           <div className="flex space-x-4 text-xs">
             {ViewResultsMenu.map((results, index) => (
-              <Popover key={index} className="relative ">
+              <Popover key={index} className="relative z-50 ">
                 <PopoverButton className="flex  items-center  text-sm/6 focus:outline-none">
                   {results.name}
                   <ChevronDownIcon className="size-4 flex-none " />
@@ -49,6 +69,20 @@ const ViewResultsContent = () => {
                 </PopoverPanel>
               </Popover>
             ))}
+            <Popover className="relative z-50 ">
+              <PopoverButton className="flex  items-center  text-sm/6 focus:outline-none">
+                Date Range
+                <ChevronDownIcon className="size-4 flex-none " />
+              </PopoverButton>
+              <PopoverPanel
+                transition
+                className="mt-4 flex space-x-4 py-3 items-center text-sm absolute top-full  py-2 px-10 border  rounded-xl bg-white transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in "
+              >
+                <input type="date" />
+                <span className="mr-2">to</span>
+                <input type="date" />
+              </PopoverPanel>
+            </Popover>
           </div>
         </div>
       </div>
@@ -102,7 +136,7 @@ const ViewResultsContent = () => {
           </thead>
           <tbody className="bg-white">
             {tableData.map((person) => (
-              <tr key={person.name} className="even:bg-gray-50">
+              <tr key={person.name} className="even:bg-gray-50  table-row">
                 <td className="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-3">
                   <input type="checkbox" />
                 </td>
@@ -154,7 +188,7 @@ const ViewResultsContent = () => {
         </button>
       </div>
     </div>
-);
+  );
 };
 
 const ViewResults = () => {

@@ -5,13 +5,18 @@ import geneWeaver from "../assets/logo_geneweaver 1.png";
 
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
-    <nav className="h-20 w-screen flex justify-around   items-center bg-[#1E5949]">
-      <div className="flex items-center text-white font-semibold">
-        <img src={geneWeaver} width={40} />
+    <nav className="h-20 w-screen flex justify-around   z-50 items-center bg-[#1E5949]">
+      <div
+        onClick={() => navigate("/")}
+        className="flex items-center text-white font-semibold cursor-pointer"
+      >
+        <img className="cursor-pointer " src={geneWeaver} width={40} />
         <span>GeneWeaver</span>
       </div>
       <img />

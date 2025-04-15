@@ -1,14 +1,24 @@
 import React from "react";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const EmphasisGenesContent = () => {
+    useGSAP(() => {
+      gsap.from(".container", {
+        opacity: 0,
+        scale: 0.75,
+        duration: 2,
+        ease: "bounce",
+      });
+    });
   return (
-    <div className="px-7 flex-1">
+    <div className="px-7 flex-1 max-w-7xl mx-auto w-full">
       <h1 className="mt-8">Emphasis Genes</h1>
       <div className="h-1 w-full mt-2 bg-[#036303] rounded-md" />
 
-      <div className="w-full h-[60vh]  border mt-10 rounded-md shadow-md flex py-7 px-4">
+      <div className="w-full h-[60vh] container border mt-10 rounded-md shadow-md flex py-7 px-4">
         <div className="w-1/2">
           <h1>Current Emphasis List</h1>
         </div>
@@ -30,8 +40,10 @@ const EmphasisGenesContent = () => {
 };
 
 const EmphasisGenes = () => {
+
+
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen ">
       <Header />
       <EmphasisGenesContent />
       <Footer />
