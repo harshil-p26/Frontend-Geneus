@@ -1,13 +1,12 @@
-import React from "react";
 import Header from "../ui/Header";
-import Footer from "../ui/Footer";
+import Footer from "../ui/Footer";       
 import {
   ArrowDownTrayIcon,
   ChevronDownIcon,
   PlayIcon,
 } from "@heroicons/react/16/solid";
 
-const UploadGeneSetContent = () => {
+const UploadGeneSetContent = () => { 
   return (
     <div className="flex-1 max-w-7xl mx-auto w-full  my-10">
       <header className="w-full p-5 text-white bg-[#1E5949]">

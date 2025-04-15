@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+
 // import image from "../assets/2.png";
 import { analysisTools } from "../data/data";
 import Header from "../ui/Header";
@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const AnalyzeGeneSetContent = () => {
-  const toolRef = useRef(null);
+
   const tl = gsap.timeline();
 
   useGSAP(() => {

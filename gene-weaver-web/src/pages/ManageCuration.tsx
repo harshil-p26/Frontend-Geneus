@@ -1,4 +1,3 @@
-import React from "react";
 import { PlusIcon, UserGroupIcon } from "@heroicons/react/16/solid";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";

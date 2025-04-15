@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
@@ -16,9 +15,7 @@ import Footer from "../ui/Footer";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-
 const ViewResultsContent = () => {
-  
   useGSAP(() => {
     gsap.fromTo(
       ".table-row",
@@ -62,7 +59,10 @@ const ViewResultsContent = () => {
                   className=" border mt-4  text-sm absolute top-full  py-2 px-2 w-56 rounded-xl bg-white transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in "
                 >
                   {results.subMenu.map((subItem, index) => (
-                    <a className="block rounded-lg px-3 py-2 text-sm/6 font-semibold hover:bg-gray-50">
+                    <a
+                      key={index}
+                      className="block rounded-lg px-3 py-2 text-sm/6 font-semibold hover:bg-gray-50"
+                    >
                       {typeof subItem === "string" ? subItem : subItem.name}
                     </a>
                   ))}

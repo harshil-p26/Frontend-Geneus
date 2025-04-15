@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../ui/Header";
 import Hero from "../ui/Hero";
 import Main from "../ui/Main";

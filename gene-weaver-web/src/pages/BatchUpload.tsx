@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";
 import { FolderIcon, UserGroupIcon } from "@heroicons/react/16/solid";

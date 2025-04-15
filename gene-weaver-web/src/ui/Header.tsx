@@ -1,4 +1,3 @@
-import React from "react";
 
 import { navbarLinks } from "../data/data";
 import geneWeaver from "../assets/logo_geneweaver 1.png";

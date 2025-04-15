@@ -1,7 +1,4 @@
-import React from "react";
 import geneWeaverLogo from "../assets/logo_geneweaver 1.png";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 const Hero = () => {
 //     const 
