@@ -40,11 +40,12 @@ To get started with the project, follow these steps:
    git clone https://github.com/harshil-p26/Frontend-Geneus.git
   
   2. Change the directory to the GeneWeaver directory
-    ```
+
+      ```
       cd geneweaver-website
      ```
 
-  3. Install all the dependencies
+  4. Install all the dependencies
    ```
      npm install
    ```
