@@ -1,3 +1,6 @@
+
+
+
 # GeneWeaver Website Revamp
 
 ## Project Overview
@@ -54,5 +57,8 @@ To get started with the project, follow these steps:
    ```
  npm run dev
   ```
+
+[Project Management file - Jax Front End](https://docs.google.com/spreadsheets/d/1IG40tUbtOE7sD-_eNaaatgWg9TSU6UvqSEWNPIMeALI/edit?gid=1682574974#gid=1682574974)
+
 
 
